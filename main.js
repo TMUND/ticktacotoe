@@ -13,9 +13,6 @@
 
 // $( ".row1" ).click( handler ).find( ".row1" ).hide();
 
-function sayHello() {
-	alert('Hello World');
-}
 
 $(document).ready(function() {
     $("#test").click(function() {
@@ -26,3 +23,7 @@ $(document).ready(function() {
         $("div").show();
     });
 });
+
+function sayHello() {
+	alert('Hello World');
+};
