@@ -16,3 +16,12 @@
 function sayHello() {
 	alert('Hello World');
 }
+
+$(document).ready(function(){
+    $("#test").click(function(){
+        $("div").hide();
+    });
+    $("#test1").click(function(){
+        $("div").show();
+    });
+});
