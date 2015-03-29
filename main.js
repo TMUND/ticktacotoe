@@ -27,3 +27,15 @@ $(document).ready(function() {
 function sayHello() {
 	alert('Hello World');
 };
+
+// $(document).ready(function() {
+// var x = "x"
+// var o = "o"
+// var count = 0;
+// var o_win = 0;
+// var x_win = 0;
+
+// $('#board table').click(function() {
+
+//	if ($("#sqr 1").hasClass('X') && $("#sqr 2 v").hasClass('X'))
+//})
