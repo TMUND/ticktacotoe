@@ -13,6 +13,7 @@
 .square{
     width:100px;
     height:100px;
+    text-align: center;
 }
 
 .v{
@@ -47,25 +48,24 @@
   width: 100px;
   margin-left: 10px;
   margin-top: 10px;
-  position: fixed;
   border-bottom: 1px solid black;
 
 }
 .player2 {
   text-transform: uppercase;
   text-align: center;
+  float: right;
   font-family: Courier;
   font-size: 20px;
-  float: right;
   width: 100px;
-  margin-top: 55px;
   margin-right: 10px;
+  margin-top: -20px;
   border-bottom: 1px solid black;
 }
 
 #table {
   margin-left: -15px;
-  margin-top: -100px;
+  margin-top: -20px;
 }
 
 #board {
@@ -83,7 +83,8 @@
 .taco {
   height: 50px;
   width: 60px;
-  margin-right: -75px;
+  margin-right: -85px;
+  margin-top: 25px;
   float: right;
 }
 
@@ -91,4 +92,5 @@
   height: 50px;
   width: 45px;
   margin-left: 40px;
+  margin-top: 15px;
 }
