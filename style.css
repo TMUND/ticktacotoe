@@ -10,18 +10,18 @@
   background-color: white;
 }
 
-#sqr{
+.sqr{
     width:100px;
     height:100px;
     text-align: center;
 }
 
-#v{
+.v{
     border-left:1px solid #000;
     border-right:1px solid #000;
 }
 
-#h{
+.h{
     border-top:1px solid #000;
     border-bottom:1px solid #000;
 }
