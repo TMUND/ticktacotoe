@@ -2,95 +2,77 @@
   background-color: #ffffcc;
 }
 
-#test {
-  background-color: white;
+#game-wrap {
+  width: 450px;
+  height: 455px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-top-right: 20px;
+  border-top-left: 20px;
 }
 
-#test1 {
-  background-color: white;
+.row {
+  width: 100%;
+  height: 150px;
 }
 
-.sqr{
-    width:100px;
-    height:100px;
-    text-align: center;
-}
-
-.v{
-    border-left:1px solid #000;
-    border-right:1px solid #000;
-}
-
-.h{
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
-}
-
-.banner {
-  text-transform: uppercase;
+.col {
+  width: 32%;
+  height: 145.5px;
+  border: 3px solid black;
+  float: left;
   text-align: center;
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  background-color: #ffffcc;
-  font-family: Courier;
-  font-size: 30px;
-  border-bottom: 2px solid black;
-  /*position: absolute;*/
-}
-
-.player1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Courier;
-  font-size: 20px;
-  width: 100px;
-  margin-left: 10px;
-  margin-top: 10px;
-  border-bottom: 1px solid black;
-
-}
-.player2 {
-  text-transform: uppercase;
-  text-align: center;
-  float: right;
-  font-family: Courier;
-  font-size: 20px;
-  width: 100px;
-  margin-right: 10px;
-  margin-top: -20px;
-  border-bottom: 1px solid black;
-}
-
-#table {
-  margin-left: -15px;
-  margin-top: -20px;
-}
-
-#board {
-  height: 500px;
-  width: 600px;
-  background: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
-  margin-left: -150px;
+  font-size: 150px;
+  font-family: helvetica;
+  color: black;
   cursor: pointer;
 }
 
-.taco {
-  height: 50px;
-  width: 60px;
-  margin-right: -85px;
-  margin-top: 25px;
-  float: right;
+.matched {
+  color: maroon;
 }
 
-.toe {
-  height: 50px;
-  width: 45px;
-  margin-left: 40px;
-  margin-top: 15px;
+.player-1-color {
+  color: maroon;
+}
+
+#player-1-inp {
+  margin-left: 75px;
+}
+
+#player-2-inp {
+}
+
+.col:nth-child(1) {
+  border-left: none;
+}
+
+.col:nth-child(3) {
+  border-right: none;
+}
+
+.row:nth-child(1) .col {
+  border-top: none;
+  margin-top: 3px;
+}
+
+.row:nth-child(3) .col {
+  border-bottom: none;
+  margin-bottom: 3px;
+}
+
+#panel {
+  width: 435px;
+  padding: 10px;
+  margin: 100px auto;
+  background: black;
+  border-bottom-right: 20px;
+  border-bottom-left: 20px;
+}
+
+#board {
+  font-size: 30px;
+  font-family: helvetica;
+  color: whitesmoke;
+  margin-top: 10px;
 }

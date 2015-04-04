@@ -8,34 +8,34 @@
     	  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-  <div class="player1">Player 1</div>
-  <img src="../images/toetoon.png" class="toe">
-  <div class="player2">Player 2</div>
-  <img src="../images/tacotoon.png" class="taco">
-  <div class="banner">Tick - Taco - Toe</div>
-  <div id="board">
-    <table id="table">
-      <tr id="row1">
-        <td onclick="sayHello();" class="sqr 1">X</td>
-        <td onclick="sayHello();"class="sqr 2 v">X</td>
-        <td onclick="sayHello();"class="sqr 3">X</td>
-      </tr>
-      <tr id="row2">
-        <td onclick="sayHello();"class="sqr 4 h">X</td>
-        <td onclick="sayHello();"class="sqr 5 v h">X</td>
-        <td onclick="sayHello();"class="sqr 6 h">X</td>
-      </tr>
-      <tr id="row3">
-        <td onclick="sayHello();"class="sqr 7">X</td>
-        <td onclick="sayHello();"class="sqr 8 v">X</td>
-        <td onclick="sayHello();"class="sqr 9">X</td>
-      </tr>
-    </table>
-  </div>
-  <div>Hide and Show jquery example</div>
+    <div id="game-wrap">
+      
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
 
-  <button id="test">Hide</button>
-  <button id="test1">Show</button>
-  
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+    </div>
+
+    <div id="panel">
+      <input type="text" id="player-1-inp" placeholder="Enter player 1">
+      <input type="text" id="player-2-inp" placeholder="Enter player 2">
+      <button id="playButton">Play!</button>
+      <h1 id="board"></h1>
+    </div>
+
   </body>
 </html>
