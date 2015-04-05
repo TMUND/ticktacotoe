@@ -65,3 +65,10 @@
   border-bottom-right: 20px;
   border-bottom-left: 20px;
 }
+
+#board {
+  font-size: 30px;
+  font-family: helvetica;
+  color: black;
+  margin-top: 10px;
+}
