@@ -7,12 +7,9 @@
 # Soon
 
 * Figure out how to make custom image appear with click
-* Design logic for player1/player2 turns
+* Style html/css for better view
 
 ## Later
-
-* Style html/css for better view
-* Create a win counter
 
 ### Maybe
 
