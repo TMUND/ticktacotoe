@@ -28,10 +28,6 @@
   cursor: pointer;
 }
 
-.matched {
-  color: maroon;
-}
-
 .player-1-color {
   color: maroon;
 }
@@ -68,11 +64,4 @@
   background: black;
   border-bottom-right: 20px;
   border-bottom-left: 20px;
-}
-
-#board {
-  font-size: 30px;
-  font-family: helvetica;
-  color: whitesmoke;
-  margin-top: 10px;
 }
