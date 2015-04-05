@@ -11,30 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 1837,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 2297,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "main.js",
-			"settings":
-			{
-				"buffer_size": 6913,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -68,11 +44,14 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Toni/Desktop/projects/ticktacotoe/ticktacotoe.sublime-project",
+		"/C/Users/Toni/Desktop/projects/ticktacotoe/.gitignore",
+		"/C/Users/Toni/Desktop/projects/ticktacotoe/.git/COMMIT_EDITMSG",
+		"/C/Users/Toni/Desktop/projects/ticktacotoe/.git/info/exclude",
+		"/C/Users/Toni/Desktop/projects/ticktacotoe/logicidea.js",
 		"/C/Users/Toni/Desktop/projects/openseadragon/openseadragon-master/src/navigator.js",
 		"/C/Users/Toni/Desktop/projects/openseadragon/openseadragon-master/README.md",
-		"/C/Users/Toni/Desktop/projects/ticktacotoe/.git/COMMIT_EDITMSG",
 		"/C/Users/Toni/Desktop/projects/ticktacotoe/README.md",
-		"/C/Users/Toni/Desktop/projects/ticktacotoe/logicidea.js",
 		"/C/Users/Toni/Desktop/projects/canvas_example.html",
 		"/C/Users/Toni/Desktop/projects/ticktacotoe/index.html",
 		"/C/Users/Toni/Desktop/projects/ticktacotoe/jquery-2.1.3.js",
@@ -109,6 +88,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".player-1-inp {\n  margin: auto;\n}",
+			"gray",
+			"white",
 			"showNavigationControl",
 			"viewer.clearControls",
 			"currentplayer",
@@ -167,93 +149,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 1837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "style.css",
-					"settings":
-					{
-						"buffer_size": 2297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "main.js",
-					"settings":
-					{
-						"buffer_size": 6913,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
