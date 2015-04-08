@@ -2,11 +2,11 @@ var player1Name = '';
 var player2Name = '';
 var turn = '';
 
-var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];   // 3 x 3 array for mapping the moves
-var hasWinner = 0;                              // flag variable for finding the winner
-var moveCount = 0;                              // for counting the number of moves on the board (max will be 9)
+var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mapping the moves
+var hasWinner = 0;                                      // flag variable for finding the winner
+var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
-function boardMessage(x) {                      // function for writing on the panel (player names)
+function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
 
