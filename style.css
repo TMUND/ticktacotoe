@@ -79,6 +79,7 @@
   height: 90px;
   width: 100px;
   position: absolute;
+  z-index: -1;
 }
 
 .toe {
@@ -87,4 +88,5 @@
   height: 120px;
   width: 120px;
   position: relative;
+  z-index: -2;
 }

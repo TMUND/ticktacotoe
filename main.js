@@ -76,7 +76,7 @@ $('.col').click(function () {
 
     if (turn === player1Name) {
         moveCount++;
-        $(this).text('O');
+        $(this).addClass('toe');
         grid[row][col] = 1;                             // ** How does this work? Or why, don't you need to reference with a selector of some sort? **
 
         var ifWon = winnerCheck(1, player1Name);        // ** What does the 1 do here? **
@@ -101,7 +101,7 @@ $('.col').click(function () {
         }
     } else if (turn = player2Name) {
         moveCount++;
-        $(this).text('X');
+        $(this).addClass('taco');
         grid[row][col] = 2;                             // ** why is it 2 here but 1 for player1?
 
         var ifWon = winnerCheck(2, player2Name);
