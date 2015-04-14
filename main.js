@@ -31,6 +31,8 @@ function init() {
 
     $('.col').map(function() {                          // .map is used to change the values of an array
         $(this).text('');                               // .text (string of combined text of all matched elements (here, .col))
+        $(this).removeClass('toe');                     // Clears the board for next game
+        $(this).removeClass('taco');
     }).get();                                           // .get is used for retrieving an element
 
     hasWinner = 0;

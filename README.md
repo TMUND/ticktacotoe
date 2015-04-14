@@ -6,7 +6,7 @@
 
 # Soon
 
-* Figure out how to make custom image appear with click
+* Remove all images from board once game state is Won/Draw (.removeClass)?
 * Style html/css for better view
 
 ## Later
