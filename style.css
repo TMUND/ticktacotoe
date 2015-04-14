@@ -75,18 +75,14 @@
 
 .taco {
   background-image: url("././images/tacotoon.png");
-  background-size: 100px 90px;
-  height: 90px;
-  width: 100px;
-  position: absolute;
-  z-index: -1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .toe {
   background-image: url("././images/toetoon.png");
-  background-size: 120px 120px;
-  height: 120px;
-  width: 120px;
-  position: relative;
-  z-index: -2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

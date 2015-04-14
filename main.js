@@ -70,7 +70,7 @@ $('.col').click(function () {
     }
 
     if (hasWinner === 1) {
-        alert('Click PLAY for another game!');
+        alert('Click PLAY AGAIN for another game!');
         return;
     }
 
