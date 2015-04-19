@@ -6,6 +6,23 @@ var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mappi
 var hasWinner = 0;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
+var text = ["TICK1", "TICK2", "TICK3", "TICK4", "TICK5"];
+var counter = 0;
+
+
+var elem = document.getElementById("tick");
+
+setInterval(change, 1000);
+
+function change() {
+    elem.innerHTML = text[counter];
+    counter++;
+    if (counter >= text.length) {
+        alert("Next player's turn!");
+        counter = 0;
+    }
+}
+
 function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
@@ -23,19 +40,6 @@ function setTurn() {                                    // setting the turn for 
         boardMessage (player2Name + "'s turn now");
     }
 }
-
-// function drawOnCanvas() {
-//     var canvas = document.getElementById('canvas1');
-//     if (canvas.getContext) {
-//         canvas_context = canvas.getContext('2d');
-//         doTimer();
-//     }
-// }
-
-// function doTimer() {
-//     x_pos = 0;
-//     timerID = setInterval("moveBox()", 200);
-// }
 
 // document.getElementById("timer").addEventListener("click", timer);
 

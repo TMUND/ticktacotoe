@@ -1,15 +1,18 @@
 ## TickTacoToe
 
-* My first attempt at a game using JS, CSS, HTML
+* My first attempt at a game using JS, CSS, HTML, Canvas?
 
 ##TODO:
 
 # Soon
 
-* Remove all images from board once game state is Won/Draw (.removeClass)?
-* Style html/css for better view
+* Set-up timer for each turn
 
 ## Later
+
+* Use Canvas to draw words with each passing second during a turn
+* Keep scores
+* Style html/css for better view
 
 ### Maybe
 
