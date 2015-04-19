@@ -91,3 +91,21 @@
   width: 50px;
   height: 50px;
 }
+
+#canvas1 {
+  position: relative;
+  float: left;
+  height: 400px;
+  width: 200px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#canvas2 {
+  position: relative;
+  float: right;
+  height: 400px;
+  width: 200px;
+  border-style: solid;
+  border-width: 2px;
+}

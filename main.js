@@ -24,17 +24,30 @@ function setTurn() {                                    // setting the turn for 
     }
 }
 
-document.getElementById("timer").addEventListener("click", timer);
+// function drawOnCanvas() {
+//     var canvas = document.getElementById('canvas1');
+//     if (canvas.getContext) {
+//         canvas_context = canvas.getContext('2d');
+//         doTimer();
+//     }
+// }
 
-function timer() {
-    alert("You have 10 seconds to make a move!");
-}
+// function doTimer() {
+//     x_pos = 0;
+//     timerID = setInterval("moveBox()", 200);
+// }
 
-var timer = setTimeout(function() {
-    alert('Your turn is over!');
-}, 10000);
+// document.getElementById("timer").addEventListener("click", timer);
 
-$('#timer').click(timer);
+// function timer() {
+//     alert("You have 10 seconds to make a move!");
+// }
+
+// var timer = setTimeout(function() {
+//     alert('Your turn is over!');
+// }, 10000);
+
+// $('#timer').click(timer);
 
 function init() {
     turn = '';
