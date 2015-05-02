@@ -6,11 +6,12 @@
 
 # Soon
 
+* Create divs to us with jquery .eq
 * Set-up timer for each turn
+* Arrange text-entry box differently
 
 ## Later
 
-* Use Canvas to draw words with each passing second during a turn
 * Keep scores
 * Style html/css for better view
 
