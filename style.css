@@ -6,7 +6,7 @@
   width: 450px;
   height: 455px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 180px;
   border-top-right: 20px;
   border-top-left: 20px;
 }
@@ -33,10 +33,22 @@
 }
 
 #player-1-inp {
-  margin-left: 75px;
+  margin: auto;
+  margin-top: 17px;
+  height: 20px;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
 }
 
 #player-2-inp {
+  margin: auto;
+  height: 20px;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
 }
 
 .col:nth-child(1) {
@@ -58,19 +70,33 @@
 }
 
 #panel {
-  width: 435px;
+  width: 500px;
+  height: 100px;
   padding: 10px;
-  margin: 100px auto;
-  background: black;
-  border-bottom-right: 20px;
-  border-bottom-left: 20px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background: #EE9572;
+  border-radius: 25px;
 }
 
 #board {
-  font-size: 30px;
+  font-size: 20px;
   font-family: helvetica;
-  color: black;
-  margin-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #8B4500;
+  position: absolute;
+  width: 100%;
+}
+
+#playButton {
+  border-radius: 5px;
+  margin-left: 90px;
+  height: 60px;
+  width: 90px;
+  border-color: #CD6600;
+  font-size: 1.5em;
 }
 
 .taco {

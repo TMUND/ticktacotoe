@@ -25,18 +25,6 @@ function setTurn() {                                    // setting the turn for 
     }
 }
 
-// document.getElementById("timer").addEventListener("click", timer);
-
-// function timer() {
-//     alert("You have 10 seconds to make a move!");
-// }
-
-// var timer = setTimeout(function() {
-//     alert('Your turn is over!');
-// }, 10000);
-
-// $('#timer').click(timer);
-
 function init() {
     turn = '';
     grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -92,8 +80,8 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
-        $('#timer').fadeIn(1500, function() {
-            $('#timer').fadeOut(1500);
+        $('#timer').fadeIn(1000, function() {
+            $('#timer').fadeOut(1000);
         });
         grid[row][col] = 1;
 
@@ -121,8 +109,8 @@ $('.col').click(function () {
     } else if (turn = player2Name) {
         moveCount++;
         $(this).addClass('taco');
-        $('#timer2').fadeIn(1500, function() {
-            $('#timer2').fadeOut(1500);
+        $('#timer2').fadeIn(1000, function() {
+            $('#timer2').fadeOut(1000);
         });
         grid[row][col] = 2;
 
