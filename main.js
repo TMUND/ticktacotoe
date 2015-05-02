@@ -6,25 +6,10 @@ var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mappi
 var hasWinner = 0;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
-// var text = ["TICK1", "TICK2", "TICK3", "TICK4", "TICK5"];
-// var counter = 0;
-
-// var elem = document.getElementById("tick");
-
-// setInterval(change, 1000);
-
-function change() {
-    elem.innerHTML = text[counter];
-    counter++;
-    if (counter >= text.length) {
-        alert("Next player's turn!");
-        counter = 0;
-    }
-}
-
 function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
+
 
 function setTurn() {                                    // setting the turn for who goes, random
     var r = Math.floor((Math.random() * 2) + 1);
@@ -94,7 +79,7 @@ $('.col').click(function () {
     var row = $(this).parent().index();                 // .parent gets the parent of each element in the current set of matched elements
     var col = $(this).index();                          // .index since no argument passed here, returns integer value indicating the...
 
-    if (grid[row][col] !== 0) {                         //  ..position of the first element within the jQuery object relative to its sibling elements
+    if (grid[row][col] !== 0) {                         // .position of the first element within the jQuery object relative to its sibling elements
         alert('This square is already taken');
         return;
     }
@@ -110,6 +95,13 @@ $('.col').click(function () {
         grid[row][col] = 1;
 
         var ifWon = winnerCheck(1, player1Name);
+
+        if (turn === player1Name) {
+            $('#timer').fadeIn(1500).delay(1000).fadeout(1500);
+        } else {
+            return;
+            }
+        }
 
         if (!ifWon) {
             if (moveCount >= 9) {

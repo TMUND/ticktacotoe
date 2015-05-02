@@ -87,6 +87,17 @@
   background-position: center;
 }
 
+#timer {
+  text-align: center;
+  color: red;
+  font-size: 250%;
+  width: 100px;
+  margin-left: 200px;
+  padding: 20px;
+  position: absolute;
+  margin-top: 180px;
+}
+
 #canvas1 {
   position: relative;
   float: left;
