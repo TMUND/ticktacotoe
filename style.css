@@ -88,6 +88,7 @@
 }
 
 #timer {
+  display: none;
   text-align: center;
   color: red;
   font-size: 250%;

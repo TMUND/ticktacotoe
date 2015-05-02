@@ -67,7 +67,7 @@ $('#playButton').click(function () {
     }
 
     setTurn();                                          // set the turn
-})
+});
 
 $('.col').click(function () {
 
@@ -92,16 +92,13 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
+        $('#timer').fadeIn('slow', function() {
+            $('#timer').fadeOut('slow');
+        });
         grid[row][col] = 1;
 
         var ifWon = winnerCheck(1, player1Name);
 
-        if (turn === player1Name) {
-            $('#timer').fadeIn(1500).delay(1000).fadeout(1500);
-        } else {
-            return;
-            }
-        }
 
         if (!ifWon) {
             if (moveCount >= 9) {
@@ -124,6 +121,9 @@ $('.col').click(function () {
     } else if (turn = player2Name) {
         moveCount++;
         $(this).addClass('taco');
+        $('#timer').fadeIn('slow', function() {
+            $('#timer').fadeOut('slow');
+        });
         grid[row][col] = 2;
 
         var ifWon = winnerCheck(2, player2Name);
