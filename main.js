@@ -52,6 +52,8 @@ function init() {
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
 }                                                       // grid array, panel messages, and the grids for the new game
 
+$(document).ready(function () {
+
 $('#playButton').click(function () {
 
     if (hasWinner === 1) {                              // this click is to initialize the game (if there was a winner, a play again button)
@@ -147,6 +149,8 @@ $('.col').click(function () {
             return;
         }
     }
+});
+
 });
 
 function winnerCheck(n, playerName) {
