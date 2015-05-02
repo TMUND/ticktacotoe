@@ -93,10 +93,23 @@
   color: red;
   font-size: 250%;
   width: 100px;
-  margin-left: 200px;
+  margin-left: 250px;
   padding: 20px;
   position: absolute;
   margin-top: 180px;
+}
+
+#timer2 {
+  display: none;
+  text-align: center;
+  color: blue;
+  font-size: 250%;
+  width: 100px;
+  float: right;
+  padding: 20px;
+  position: relative;
+  margin-top: 180px;
+  margin-right: 250px;
 }
 
 #canvas1 {

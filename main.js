@@ -92,8 +92,8 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
-        $('#timer').fadeIn('slow', function() {
-            $('#timer').fadeOut('slow');
+        $('#timer').fadeIn(1500, function() {
+            $('#timer').fadeOut(1500);
         });
         grid[row][col] = 1;
 
@@ -121,8 +121,8 @@ $('.col').click(function () {
     } else if (turn = player2Name) {
         moveCount++;
         $(this).addClass('taco');
-        $('#timer').fadeIn('slow', function() {
-            $('#timer').fadeOut('slow');
+        $('#timer2').fadeIn(1500, function() {
+            $('#timer2').fadeOut(1500);
         });
         grid[row][col] = 2;
 
