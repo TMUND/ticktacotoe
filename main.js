@@ -155,7 +155,7 @@ function winnerCheck(n, playerName) {
         hasWinner = 1;
         moveCount = 0;
 
-        $('#playButton').text('play again?');
+        $('#playButton').text('PLAY AGAIN!?');
         return true;
     }
 
