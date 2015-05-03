@@ -90,7 +90,7 @@ $('.col').click(function () {
 
         if (!ifWon) {
             if (moveCount >= 9) {
-                boardMessage('Draw!');
+                boardMessage('It\'s a draw!');
                 moveCount = 0;
                 $('#playButton').text('Play again!');
                 hasWinner = 1;
@@ -118,7 +118,7 @@ $('.col').click(function () {
 
         if (!ifWon) {
             if (moveCount >= 9) {
-                boardMessage('Draw!');
+                boardMessage('It\'s a draw!');
                 moveCount = 0;
                 $('#playButton').text('Play again!');
                 hasWinner = 1;
