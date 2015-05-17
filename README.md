@@ -4,13 +4,13 @@
 
 ##TODO:
 
-# Soon
+### Soon
 
+* Set-up timer for each turn, figure out how to only have timer when someone's turn
 * Show "good luck" banner at start of game using jQuery
-* Set-up timer for each turn
 * Arrange text-entry box differently
 
-## Later
+### Later
 
 * Keep scores
 * Style html/css for better view

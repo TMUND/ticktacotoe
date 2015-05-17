@@ -7,8 +7,14 @@ var hasWinner = 0;                                      // flag variable for fin
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
 var pulseTimer = function() {
+  $('#timer').fadeIn(1000, function() {
+    $('#timer').fadeOut(pulseTimer);
+  });
+}
+
+var pulseTimer2 = function() {
   $('#timer2').fadeIn(1000, function() {
-    $('#timer2').fadeOut(pulseTimer);
+    $('#timer2').fadeOut(pulseTimer2);
   });
 }
 
@@ -85,8 +91,13 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
-        pulseTimer();
         grid[row][col] = 1;
+
+        pulseTimer();
+
+        $('#timer').click(function() {
+          $(this).find("div").stop(true, true);
+        });
 
         var ifWon = winnerCheck(1, player1Name);
 
@@ -113,6 +124,11 @@ $('.col').click(function () {
         moveCount++;
         $(this).addClass('taco');
         grid[row][col] = 2;
+        pulseTimer2();
+
+        $('#timer2').click(function() {
+          $(this).find("div").stop(false, false);
+        });
 
         var ifWon = winnerCheck(2, player2Name);
 
