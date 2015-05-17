@@ -6,10 +6,15 @@ var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mappi
 var hasWinner = 0;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
+var pulseTimer = function() {
+  $('#timer2').fadeIn(1000, function() {
+    $('#timer2').fadeOut(pulseTimer);
+  });
+}
+
 function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
-
 
 function setTurn() {                                    // setting the turn for who goes, random
     var r = Math.floor((Math.random() * 2) + 1);
@@ -80,9 +85,7 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
-        $('#timer').fadeIn(1000, function() {
-            $('#timer').fadeOut(1000);
-        });
+        pulseTimer();
         grid[row][col] = 1;
 
         var ifWon = winnerCheck(1, player1Name);
@@ -109,9 +112,6 @@ $('.col').click(function () {
     } else if (turn = player2Name) {
         moveCount++;
         $(this).addClass('taco');
-        $('#timer2').fadeIn(1000, function() {
-            $('#timer2').fadeOut(1000);
-        });
         grid[row][col] = 2;
 
         var ifWon = winnerCheck(2, player2Name);
