@@ -6,7 +6,6 @@ var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mappi
 var hasWinner = 0;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
-
 function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
@@ -58,23 +57,15 @@ $('#playButton').click(function () {
 });
 
 var pulseTimer = function() {
-  if (turn === player1Name) {
-    $('#timer').fadeIn(1000, function() {
-      $('#timer').fadeOut(pulseTimer);
-    } else {
-      return();
-    });
-  }
+  $('#timer').fadeIn(1000, function() {
+    $('#timer').fadeOut(pulseTimer);
+  });
 }
 
 var pulseTimer2 = function() {
-  if (turn === player2Name) {
-    $('#timer2').fadeIn(1000, function() {
-      $('#timer2').fadeOut(pulseTimer2);
-  } else {
-      return();
-    });
-  }
+  $('#timer2').fadeIn(1000, function() {
+    $('#timer2').fadeOut(pulseTimer2);
+  });
 }
 
 $('.col').click(function () {
@@ -100,9 +91,14 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
+        pulseTimer();
         grid[row][col] = 1;
 
         pulseTimer();
+
+        $('#timer').click(function() {
+          $(this).stop(true, true);
+        });
 
         var ifWon = winnerCheck(1, player1Name);
 
@@ -117,7 +113,6 @@ $('.col').click(function () {
 
             } else {
                 turn = player2Name;
-                // pulseTimer = false;
                 boardMessage(player2Name + "'s turn now");
             }
 
@@ -133,6 +128,10 @@ $('.col').click(function () {
 
         pulseTimer2();
 
+        $('#timer2').click(function() {
+          $(this).stop(true, true);
+        });
+
         var ifWon = winnerCheck(2, player2Name);
 
         if (!ifWon) {
@@ -145,7 +144,6 @@ $('.col').click(function () {
 
             } else {
                 turn = player1Name;
-                // pulseTimer2 = false;
                 boardMessage(player1Name + "'s turn now");
             }
 
