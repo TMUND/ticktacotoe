@@ -60,13 +60,13 @@ var pulseTimer = function() {
   $('#timer').fadeIn(1000, function() {
     $('#timer').fadeOut(pulseTimer);
   });
-}
+};
 
 var pulseTimer2 = function() {
   $('#timer2').fadeIn(1000, function() {
     $('#timer2').fadeOut(pulseTimer2);
   });
-}
+};
 
 $('.col').click(function () {
 
@@ -91,11 +91,10 @@ $('.col').click(function () {
     if (turn === player1Name) {
         moveCount++;
         $(this).addClass('toe');
-        pulseTimer();
         grid[row][col] = 1;
 
         pulseTimer();
-        $(this).stop(true, true);
+        $('#timer2').stop(true, false).hide();
 
         var ifWon = winnerCheck(1, player1Name);
 
@@ -118,13 +117,13 @@ $('.col').click(function () {
         } else {
             return;
         }
-    } else if (turn = player2Name) {
+    } else if (turn === player2Name) {
         moveCount++;
         $(this).addClass('taco');
         grid[row][col] = 2;
 
         pulseTimer2();
-        $(this).stop(true, true);
+        $('#timer').stop(true, false).hide();
 
         var ifWon = winnerCheck(2, player2Name);
 
