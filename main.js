@@ -95,10 +95,7 @@ $('.col').click(function () {
         grid[row][col] = 1;
 
         pulseTimer();
-
-        $('#timer').click(function() {
-          $(this).stop(true, true);
-        });
+        $(this).stop(true, true);
 
         var ifWon = winnerCheck(1, player1Name);
 
@@ -127,10 +124,7 @@ $('.col').click(function () {
         grid[row][col] = 2;
 
         pulseTimer2();
-
-        $('#timer2').click(function() {
-          $(this).stop(true, true);
-        });
+        $(this).stop(true, true);
 
         var ifWon = winnerCheck(2, player2Name);
 
