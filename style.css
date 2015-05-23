@@ -35,25 +35,21 @@
 #player-1-inp {
   border-radius: 5px;
   border-color: #CD6600;
-  height: 20px;
-  width: 50%;
   text-transform: uppercase;
   text-align: center;
   font-size: 1em;
   display: block;
-  margin : 16px 85px;
+  margin : 4% 22%;
 }
 
 #player-2-inp {
   border-radius: 5px;
   border-color: #CD6600;
-  height: 20px;
-  width: 50%;
   text-transform: uppercase;
   text-align: center;
   font-size: 1em;
   display: block;
-  margin : 16px 85px;
+  margin : 4% 22%;
 }
 
 .col:nth-child(1) {
@@ -92,27 +88,30 @@
   color: #8B4500;
   position: absolute;
   width: 100%;
+  margin-top: 5%;
 }
 
 #textArea1 {
   background-color: #EE9572;
   float: left;
   height: 60px;
-  width: 400px;
+  width: 25%;
+  border-radius: 10px;
+  margin-left: 5%;
 }
 
 #textArea2 {
   background-color: #EE9572;
   float: right;
   height: 60px;
-  width: 400px;
+  width: 25%;
+  border-radius: 10px;
+  margin-right: 5%;
 }
 
 #play {
     position:relative;
-    margin:0 auto;
     clear:left;
-    height:auto;
     z-index: 0;
     text-align:center;
 }​
@@ -149,7 +148,7 @@
   margin-left: 12%;
   padding: 20px;
   position: absolute;
-  margin-top: 29%;
+  margin-top: 21%;
 }
 
 #timer2 {
@@ -161,7 +160,7 @@
   float: right;
   padding: 20px;
   position: relative;
-  margin-top: 29%;
+  margin-top: 21%;
   margin-right: 12%;
 }
 
