@@ -17,16 +17,19 @@ function setTurn() {                                    // setting the turn for 
 
     if (r === 1) {
         turn = player1Name;
+        startPlayerTickAnimation(1);
         boardMessage (player1Name + "'s turn now");
 
     } else {
         turn = player2Name;
+        startPlayerTickAnimation(2);
         boardMessage (player2Name + "'s turn now");
     }
 }
 
 function init() {
     turn = '';
+    startPlayerTickAnimation();
     grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     boardMessage('');
 
@@ -38,19 +41,50 @@ function init() {
 
     hasWinner = false;
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
-    pulseTimer = true;
-    pulseTimer2 = true;
+    tickAnimation = true;
+    tickAnimation2 = true;
 }                                                       // grid array, panel messages, and the grids for the new game
 
-var pulseTimer = function() {
-  $('#timer').fadeIn(1000, function() {
-    $('#timer').fadeOut(pulseTimer);
+var player1TickAnimation = false;
+var player2TickAnimation = false;
+
+var startPlayerTickAnimation = function(playerNumber) {
+    var intervalToCancel = false;
+    var intervalToStart = false;
+    var animationTouse = false;
+
+    if (playerNumber === 1) {
+        if (player2TickAnimation) intervalToCancel = player2TickAnimation;
+        intervalToStart = player1TickAnimation;
+        animationTouse = tickAnimation;
+    } else if (playerNumber === 2) {
+        if (player1TickAnimation) intervalToCancel = player1TickAnimation;
+        intervalToStart = player2TickAnimation;
+        animationTouse = tickAnimation2;
+    } else {
+        intervalToCancel = (player1TickAnimation || player2TickAnimation);
+    }
+
+    if (intervalToCancel) {
+        clearInterval(intervalToCancel);
+    }
+
+    if (intervalToStart) {
+        intervalToStart = setInterval(function() {
+            animationTouse();
+        }, 1000);
+    }
+};
+
+var tickAnimation = function() {
+  $('#timer').fadeIn(500, function() {
+    $('#timer').fadeOut(500);
   });
 };
 
-var pulseTimer2 = function() {
-  $('#timer2').fadeIn(1000, function() {
-    $('#timer2').fadeOut(pulseTimer2);
+var tickAnimation2 = function() {
+  $('#timer2').fadeIn(500, function() {
+    $('#timer2').fadeOut(500);
   });
 };
 
@@ -97,7 +131,8 @@ $('.col').click(function () {
         $(this).addClass('toe');
         grid[row][col] = 1;
 
-        pulseTimer();
+        tickAnimation();
+
         $('#timer2').stop(true, false).hide();
 
         var ifWon = winnerCheck(1, player1Name);
@@ -113,6 +148,7 @@ $('.col').click(function () {
 
             } else {
                 turn = player2Name;
+                startPlayerTickAnimation(2);
                 boardMessage(player2Name + "'s turn now");
             }
 
@@ -126,7 +162,7 @@ $('.col').click(function () {
         $(this).addClass('taco');
         grid[row][col] = 2;
 
-        pulseTimer2();
+        tickAnimation2();
         $('#timer').stop(true, false).hide();
 
         var ifWon = winnerCheck(2, player2Name);
@@ -141,6 +177,7 @@ $('.col').click(function () {
 
             } else {
                 turn = player1Name;
+                startPlayerTickAnimation(1);
                 boardMessage(player1Name + "'s turn now");
             }
 
@@ -169,11 +206,11 @@ function winnerCheck(n, playerName) {
         boardMessage(playerName + " won the game!");
         hasWinner = true;
         moveCount = 0;
-        pulseTimer = false;
-        pulseTimer2 = false;
+        tickAnimation = false;
+        tickAnimation2 = false;
 
         // init();
-        
+
         $('#playButton').text('PLAY AGAIN!?');
         return true;
     }
