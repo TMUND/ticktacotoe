@@ -1,5 +1,7 @@
 var player1Name = '';
 var player2Name = '';
+var player1TickAnimation = false;
+var player2TickAnimation = false;
 var turn = '';
 
 var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mapping the moves
@@ -41,12 +43,8 @@ function init() {
 
     hasWinner = false;
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
-    tickAnimation = true;
-    tickAnimation2 = true;
 }                                                       // grid array, panel messages, and the grids for the new game
 
-var player1TickAnimation = false;
-var player2TickAnimation = false;
 
 var startPlayerTickAnimation = function(playerNumber) {
     var intervalToCancel = false;
@@ -131,9 +129,6 @@ $('.col').click(function () {
         $(this).addClass('toe');
         grid[row][col] = 1;
 
-        tickAnimation();
-
-        $('#timer2').stop(true, false).hide();
 
         var ifWon = winnerCheck(1, player1Name);
 
@@ -162,8 +157,6 @@ $('.col').click(function () {
         $(this).addClass('taco');
         grid[row][col] = 2;
 
-        tickAnimation2();
-        $('#timer').stop(true, false).hide();
 
         var ifWon = winnerCheck(2, player2Name);
 
@@ -206,8 +199,6 @@ function winnerCheck(n, playerName) {
         boardMessage(playerName + " won the game!");
         hasWinner = true;
         moveCount = 0;
-        tickAnimation = false;
-        tickAnimation2 = false;
 
         // init();
 
