@@ -54,11 +54,11 @@ var startPlayerTickAnimation = function(playerNumber) {
 
     if (playerNumber === 1) {
         if (player2TickAnimation) intervalToCancel = player2TickAnimation;
-        intervalToStart = player1TickAnimation;
+        intervalToStart = "player1TickAnimation";
         animationTouse = tickAnimation;
     } else if (playerNumber === 2) {
         if (player1TickAnimation) intervalToCancel = player1TickAnimation;
-        intervalToStart = player2TickAnimation;
+        intervalToStart = "player2TickAnimation";
         animationTouse = tickAnimation2;
     } else {
         intervalToCancel = (player1TickAnimation || player2TickAnimation);
@@ -69,7 +69,7 @@ var startPlayerTickAnimation = function(playerNumber) {
     }
 
     if (intervalToStart) {
-        intervalToStart = setInterval(function() {
+        window[intervalToStart] = setInterval(function() {
             animationTouse();
         }, 1000);
     }
