@@ -43,6 +43,7 @@ function init() {
 
     hasWinner = false;
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
+    // setTurn();
 }                                                       // grid array, panel messages, and the grids for the new game
 
 
@@ -100,6 +101,7 @@ $('#playButton').click(function () {
         return;
     }
 
+    init();
     setTurn();                                          // set the turn
 });
 
@@ -199,8 +201,7 @@ function winnerCheck(n, playerName) {
         boardMessage(playerName + " won the game!");
         hasWinner = true;
         moveCount = 0;
-
-        // init();
+        startPlayerTickAnimation();
 
         $('#playButton').text('PLAY AGAIN!?');
         return true;
