@@ -6,6 +6,7 @@ var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mappi
 var hasWinner = 0;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
+
 function boardMessage(x) {                              // function for writing on the panel (player names)
     return $('#board').text(x);
 }
@@ -37,7 +38,21 @@ function init() {
 
     hasWinner = 0;
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
+    pulseTimer = true;
+    pulseTimer2 - true;
 }                                                       // grid array, panel messages, and the grids for the new game
+
+var pulseTimer = function() {
+  $('#timer').fadeIn(1000, function() {
+    $('#timer').fadeOut(pulseTimer);
+  });
+};
+
+var pulseTimer2 = function() {
+  $('#timer2').fadeIn(1000, function() {
+    $('#timer2').fadeOut(pulseTimer2);
+  });
+};
 
 $('#playButton').click(function () {
 
@@ -56,17 +71,6 @@ $('#playButton').click(function () {
     setTurn();                                          // set the turn
 });
 
-var pulseTimer = function() {
-  $('#timer').fadeIn(1000, function() {
-    $('#timer').fadeOut(pulseTimer);
-  });
-};
-
-var pulseTimer2 = function() {
-  $('#timer2').fadeIn(1000, function() {
-    $('#timer2').fadeOut(pulseTimer2);
-  });
-};
 
 $('.col').click(function () {
 
@@ -165,6 +169,8 @@ function winnerCheck(n, playerName) {
         boardMessage(playerName + " won the game!");
         hasWinner = 1;
         moveCount = 0;
+        pulseTimer = false;
+        pulseTimer2 = false;
 
         $('#playButton').text('PLAY AGAIN!?');
         return true;
