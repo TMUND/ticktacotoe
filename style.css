@@ -141,25 +141,25 @@
 
 #timer {
   display: none;
-  width: 8%;
-  margin-left: 12%;
-  padding: 20px;
   position: absolute;
-  margin-top: 21%;
+  left: 12%;
+  top: 21%;
+  width: 10%;
+  height: 10%;
   background-image: url("././images/thetick2.png");
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;}
 
 #timer2 {
   display: none;
-  width: 8%;
-  float: right;
-  padding: 20px;
-  margin-top: 21%;
-  margin-right: 12%;
+  position: absolute;
+  top: 21%;
+  right: 12%;
+  width: 10%;
+  height: 10%;
   background-image: url("././images/thetick.png");
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;}
 
