@@ -3,7 +3,7 @@ var player2Name = '';
 var turn = '';
 
 var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mapping the moves
-var hasWinner = 0;                                      // flag variable for finding the winner
+var hasWinner = false;                                      // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
 
@@ -13,7 +13,7 @@ function boardMessage(x) {                              // function for writing 
 
 function setTurn() {                                    // setting the turn for who goes, random
     var r = Math.floor((Math.random() * 2) + 1);
-    hasWinner = 0;                                      // set the winner flag to 0 because game has just begun
+    hasWinner = false;                                      // set the winner flag to 0 because game has just begun
 
     if (r === 1) {
         turn = player1Name;
@@ -36,10 +36,10 @@ function init() {
         $(this).removeClass('taco');
     }).get();                                           // .get is used for retrieving an element
 
-    hasWinner = 0;
+    hasWinner = false;
     moveCount = 0;                                      // This initializing function is used to clear the old values like turn,
     pulseTimer = true;
-    pulseTimer2 - true;
+    pulseTimer2 = true;
 }                                                       // grid array, panel messages, and the grids for the new game
 
 var pulseTimer = function() {
@@ -56,8 +56,8 @@ var pulseTimer2 = function() {
 
 $('#playButton').click(function () {
 
-    if (hasWinner === 1) {                              // this click is to initialize the game (if there was a winner, a play again button)
-        init();
+    if (hasWinner) {                              // this click is to initialize the game (if there was a winner, a play again button)
+        init(); // Consider just hiding the play button when it's not needed
     }
 
     player1Name = $('#player-1-inp').val();             // Have the players set their names?
@@ -87,7 +87,7 @@ $('.col').click(function () {
         return;
     }
 
-    if (hasWinner === 1) {
+    if (hasWinner) {
         alert('Click PLAY AGAIN for another game!');
         return;
     }
@@ -108,7 +108,7 @@ $('.col').click(function () {
                 boardMessage('It\'s a draw!');
                 moveCount = 0;
                 $('#playButton').text('Play again!');
-                hasWinner = 1;
+                hasWinner = false;
                 return;
 
             } else {
@@ -136,7 +136,7 @@ $('.col').click(function () {
                 boardMessage('It\'s a draw!');
                 moveCount = 0;
                 $('#playButton').text('Play again!');
-                hasWinner = 1;
+                hasWinner = true;
                 return;
 
             } else {
@@ -167,14 +167,21 @@ function winnerCheck(n, playerName) {
         ) {
 
         boardMessage(playerName + " won the game!");
-        hasWinner = 1;
+        hasWinner = true;
         moveCount = 0;
         pulseTimer = false;
         pulseTimer2 = false;
 
+        // init();
+        
         $('#playButton').text('PLAY AGAIN!?');
         return true;
     }
 
     return false;
 }
+
+
+$(document).ready(function() {
+    init();
+});
