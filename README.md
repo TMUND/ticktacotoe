@@ -6,14 +6,15 @@
 
 ### Soon
 
-* Set-up timer for each turn, figure out how to only have timer when someone's turn
-* Show "good luck" banner at start of game using jQuery
-* Arrange text-entry box differently
+* Figure out how to end timer when game is over
+* Erase names in "player name" area after browser refresh
+* Put up initial screen overlay to explain game and say thank you instead of default dialog boxes
+* Show "good luck" banner at start of game
+* Fix style, colors, layout
 
 ### Later
 
 * Keep scores
-* Style html/css for better view
 
 ### Maybe
 
