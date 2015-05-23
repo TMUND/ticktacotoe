@@ -62,11 +62,11 @@ var startPlayerTickAnimation = function(playerNumber) {
         animationTouse = tickAnimation2;
     } else {
         intervalToCancel = (player1TickAnimation || player2TickAnimation);
-        intervalToCancel = false;
     }
 
     if (intervalToCancel) {
         clearInterval(intervalToCancel);
+        intervalToCancel = false;
     }
 
     if (intervalToStart) {
