@@ -140,24 +140,24 @@
 }
 
 #timer {
-  display: none;
+/*  display: none;  */
   position: absolute;
   left: 12%;
-  top: 21%;
-  width: 10%;
-  height: 10%;
+  top: 53%;
+  width: 12%;
+  height: 23%;
   background-image: url("././images/thetick2.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;}
 
 #timer2 {
-  display: none;
+/*  display: none;  */
   position: absolute;
-  top: 21%;
+  top: 53%;
   right: 12%;
-  width: 10%;
-  height: 10%;
+  width: 12%;
+  height: 23%;
   background-image: url("././images/thetick.png");
   background-size: 100%;
   background-repeat: no-repeat;

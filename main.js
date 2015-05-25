@@ -5,7 +5,7 @@ var player2TickAnimation = false;
 var turn = '';
 
 var grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];           // 3 x 3 array for mapping the moves
-var hasWinner = false;                                      // flag variable for finding the winner
+var hasWinner = false;                                  // flag variable for finding the winner
 var moveCount = 0;                                      // for counting the number of moves on the board (max will be 9)
 
 
@@ -15,7 +15,7 @@ function boardMessage(x) {                              // function for writing 
 
 function setTurn() {                                    // setting the turn for who goes, random
     var r = Math.floor((Math.random() * 2) + 1);
-    hasWinner = false;                                      // set the winner flag to 0 because game has just begun
+    hasWinner = false;                                  // set the winner flag to 0 because game has just begun
 
     if (r === 1) {
         turn = player1Name;
@@ -50,16 +50,20 @@ function init() {
 var startPlayerTickAnimation = function(playerNumber) {
     var intervalToCancel = false;
     var intervalToStart = false;
-    var animationTouse = false;
+    var animationToUse = false;
 
     if (playerNumber === 1) {
-        if (player2TickAnimation) intervalToCancel = player2TickAnimation;
+        if (player2TickAnimation)
+        intervalToCancel = player2TickAnimation;
         intervalToStart = "player1TickAnimation";
-        animationTouse = tickAnimation;
+        animationToUse = tickAnimation;
+
     } else if (playerNumber === 2) {
-        if (player1TickAnimation) intervalToCancel = player1TickAnimation;
+        if (player1TickAnimation)
+        intervalToCancel = player1TickAnimation;
         intervalToStart = "player2TickAnimation";
-        animationTouse = tickAnimation2;
+        animationToUse = tickAnimation2;
+
     } else {
         intervalToCancel = (player1TickAnimation || player2TickAnimation);
     }
@@ -71,7 +75,7 @@ var startPlayerTickAnimation = function(playerNumber) {
 
     if (intervalToStart) {
         window[intervalToStart] = setInterval(function() {
-            animationTouse();
+            animationToUse();
         }, 1000);
     }
 };
@@ -90,8 +94,8 @@ var tickAnimation2 = function() {
 
 $('#playButton').click(function () {
 
-    if (hasWinner) {                              // this click is to initialize the game (if there was a winner, a play again button)
-        init(); // Consider just hiding the play button when it's not needed
+    if (hasWinner) {                                    // this click is to initialize the game (if there was a winner, a play again button)
+        init();                                         // Consider just hiding the play button when it's not needed
     }
 
     player1Name = $('#player-1-inp').val();             // Have the players set their names?
@@ -124,6 +128,7 @@ $('.col').click(function () {
 
     if (hasWinner) {
         alert('Click PLAY AGAIN for another game!');
+        startPlayerTickAnimation();
         return;
     }
 
@@ -142,6 +147,7 @@ $('.col').click(function () {
                 moveCount = 0;
                 $('#playButton').text('Play again!');
                 hasWinner = false;
+
                 return;
 
             } else {
@@ -169,6 +175,7 @@ $('.col').click(function () {
                 moveCount = 0;
                 $('#playButton').text('Play again!');
                 hasWinner = true;
+
                 return;
 
             } else {
@@ -202,7 +209,7 @@ function winnerCheck(n, playerName) {
         boardMessage(playerName + " won the game!");
         hasWinner = true;
         moveCount = 0;
-        startPlayerTickAnimation();
+
 
         $('#playButton').text('PLAY AGAIN!?');
         return true;
