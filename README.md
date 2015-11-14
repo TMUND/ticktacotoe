@@ -6,6 +6,7 @@ My first attempt using JavaScript, HTML, CSS, and jQuery to create a simple tick
 
 ## Later
 
+* Fadeout board after win, display winning "tick" in board space
 * Figure out how to end timer when game is over
 * Erase names in "player name" area after browser refresh
 * Put up initial about modal to explain game and say thank you instead of default dialog boxes
